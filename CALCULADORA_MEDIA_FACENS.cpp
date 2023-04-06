@@ -1,75 +1,79 @@
-//Biblioteca padr„o.
+//Biblioteca padr√£o.
 #include <iostream>
-//Biblioteca padr„o.
+//Biblioteca padr√£o.
 #include <stdlib.h>
-//Evita o uso de "std::" noc cÛdigos.
+//Evita o uso de "std::" noc c√≥digos.
 using namespace std;
 //Corpo principal.
 int main() {
-    //DeclaraÁ„o das vari·veis.
+    //Declara√ß√£o das vari√°veis.
     int RA;
     double ac1, ac2, ag, af;
     char continuar;
-    //Coloquei string porque no char dava algum tipo de erro. Depois que eu escrevia o nome todas as linhas seguintes ficavam juntas. N„o sabia o que fazer D:
+    //Coloquei string porque no char dava algum tipo de erro. Depois que eu escrevia o nome todas as linhas seguintes ficavam juntas. N√£o sabia o que fazer D:
     string nome;
-    //Codigo que dever· se repetir caso a condiÁ„o seja cumprida.
+    //Codigo que dever√° se repetir caso a condi√ß√£o seja cumprida.
     do{
     //Interface interativa.    
     cout << "Informe seu nome: ";
-    //LÍ e armazena as informaÁıes na vari·vel.
+    //L√™ e armazena as informa√ß√µes na vari√°vel.
     cin >> nome;
     //Interface interativa.
     cout << "Informe seu RA: ";
-    //LÍ e armazena as informaÁıes na vari·vel.
+    //L√™ e armazena as informa√ß√µes na vari√°vel.
     cin >> RA;
     //Interface interativa.
     cout << "Informe sua nota na AC1: ";
-    //LÍ e armazena as informaÁıes na vari·vel.
+    //L√™ e armazena as informa√ß√µes na vari√°vel.
     cin >> ac1;
     //Interface interativa.
     cout << "Informe sua nota na AC2: ";
-    //LÍ e armazena as informaÁıes na vari·vel.
+    //L√™ e armazena as informa√ß√µes na vari√°vel.
     cin >> ac2;
     //Interface interativa.
     cout << "Informe sua nota na AG: ";
-    //LÍ e armazena as informaÁıes na vari·vel.
+    //L√™ e armazena as informa√ß√µes na vari√°vel.
     cin >> ag;
     //Interface interativa.
     cout << "Informe sua nota na AF: ";
-    //LÍ e armazena as informaÁıes na vari·vel.
+    //L√™ e armazena as informa√ß√µes na vari√°vel.
     cin >> af;
-    //Calculo feito para saber a mÈdia da Facens usando seus pesos.
+    //Calculo feito para saber a m√©dia da Facens usando seus pesos.
     double soma = ((ac1*1.5) + (ac2*3.5) + (ag*1) + (af*4));
     //Final do calculo dando a media final.
     double media = soma/10;
-    //Interface sem interaÁ„o, mostra apenas nossa nota.
-    cout << "Sua mÈdia foi: " << media << endl;
-    //Comando que substitui o uso de v·rios "IF...ELSE" e testa a condicional.
+    //Interface sem intera√ß√£o, mostra apenas nossa nota.
+    cout << "Sua m√©dia foi: " << media << endl;
+    //Comando que substitui o uso de v√°rios "IF...ELSE" e testa a condicional.
     switch((int)media){
-        //Caso nossa mÈdia esteja entre 10 e 5 aqui ser· ativado.
+        //Caso nossa m√©dia esteja entre 10 e 5 aqui ser√° ativado.
         case 10:
+        case 9:
+        case 8:
+        case 7:
+        case 6:
         case 5:
-            //Interface que aparece caso a mÈdia seja maior que 5, indica aprovaÁ„o.
-            cout << "ParabÈns, vocÍ foi aprovado!"<< endl;
-            //Finaliza essa parte do cÛdigo.
+            //Interface que aparece caso a m√©dia seja maior que 5, indica aprova√ß√£o.
+            cout << "Parab√©ns, voc√™ foi aprovado!"<< endl;
+            //Finaliza essa parte do c√≥digo.
             break;
-        //Mesma ideia da anterior, mas agora com outros n˙meros. Vale a pena notar que n˙meros como "3.5" est„o inclusos aqui.    
+        //Mesma ideia da anterior, mas agora com outros n√∫meros. Vale a pena notar que n√∫meros como "3.5" est√£o inclusos aqui.    
         case 4:
         case 3:
             //Janela que aparece caso a media esteja entre 3 e 4.
-            cout << "Foi quase! Ter· que fazer recuperaÁ„o." << endl;
-            //Finaliza essa parte do cÛdigo caso seja acionada.
+            cout << "Foi quase! Ter√° que fazer recupera√ß√£o." << endl;
+            //Finaliza essa parte do c√≥digo caso seja acionada.
             break;
-        //Mesma ideia do Else. Basicamente, se nada anterior funcionar esse daqui entre em aÁ„o.    
+        //Mesma ideia do Else. Basicamente, se nada anterior funcionar esse daqui entre em a√ß√£o.    
         default:
-            //Ultima janela do Switch, se aparecer È porque nada anterior foi cumprido.
-            cout << "VocÍ foi reprovado." << endl;
+            //Ultima janela do Switch, se aparecer √© porque nada anterior foi cumprido.
+            cout << "Voc√™ foi reprovado." << endl;
     }
-    //Interface interativa que possibilita recomeÁar tudo de novo.
+    //Interface interativa que possibilita recome√ßar tudo de novo.
     cout << "Deseja continuar? (s/n)"<< endl;
-    //LÍ e armazena a informaÁ„o na vari·vel.
+    //L√™ e armazena a informa√ß√£o na vari√°vel.
     cin >> continuar;
-    //CondiÁ„o da repetiÁ„o, caso a vari·vel atenda os requisitos o cÛdigo ficar· repetindo, ou parar se tiver algo diferente.
+    //Condi√ß√£o da repeti√ß√£o, caso a vari√°vel atenda os requisitos o c√≥digo ficar√° repetindo, ou parar se tiver algo diferente.
     }while(continuar == 's' ||continuar == 'S');
     return 0;
 }
